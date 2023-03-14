@@ -23,7 +23,6 @@ public class AutorTest {
 		a = null;
 	}
 
-	
 	@Test
 	void testSetImeSveOK() {
 		a.setIme("Pera");
@@ -68,6 +67,7 @@ public class AutorTest {
 		assertTrue(s.contains("Zika"));
 		assertTrue(s.contains("Zikic"));
 	}
+	
 	
 	@ParameterizedTest
 	@CsvSource(
