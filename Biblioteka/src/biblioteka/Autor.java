@@ -3,9 +3,9 @@ package biblioteka;
 import java.util.Objects;
 
 public class Autor {
-	
+
 	private String ime;
-	
+
 	private String prezime;
 
 	public String getIme() {
@@ -13,6 +13,10 @@ public class Autor {
 	}
 
 	public void setIme(String ime) {
+		if (ime == null)
+			throw new NullPointerException("Ime ne sme biti null");
+		if (ime.isEmpty())
+			throw new IllegalArgumentException("Ime ne sme biti prazno");
 		this.ime = ime;
 	}
 
@@ -21,6 +25,10 @@ public class Autor {
 	}
 
 	public void setPrezime(String prezime) {
+		if (prezime == null)
+			throw new NullPointerException("Prezime ne sme biti null");
+		if (prezime.isEmpty())
+			throw new IllegalArgumentException("Prezime ne sme biti prazno");
 		this.prezime = prezime;
 	}
 
@@ -46,5 +54,4 @@ public class Autor {
 		return Objects.equals(ime, other.ime) && Objects.equals(prezime, other.prezime);
 	}
 
-	
 }
