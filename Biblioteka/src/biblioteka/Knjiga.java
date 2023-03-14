@@ -63,6 +63,8 @@ public class Knjiga {
 	}
 
 	public void setIzdanje(int izdanje) {
+		if (izdanje < 1)
+			throw new IllegalArgumentException("Izdanje mora biti 1 ili vece");
 		this.izdanje = izdanje;
 	}
 
